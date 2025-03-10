@@ -14,8 +14,10 @@ function startTime(){ //Line 12-21: This function is used to trigger the Start a
     timeInt = setInterval(function() {
         document.getElementById('watch').innerHTML = zeroAdd(seconds);
         seconds+=3;
-        if (seconds > 30){
-            clearInterval(timeInt);
+        if (seconds >= 30){
+            clearInterval(timeInt);  
+            timeInt = null; 
+                   
         }
     }, 1000);
 }
@@ -27,14 +29,14 @@ function zeroAdd(t){  //Line 23-28: Adds 0 to the start of the count if the numb
     return t
 }
 
-function resetTime(){  //Line 30-35: This function is used to trigger the Pause button of the Stopwatch.
+function resetTime(){  //Line 30-35: This function is used to trigger the Reset button of the Stopwatch.
     document.getElementById('watch').innerHTML = "00";
     stopTime() 
     seconds = 0
     
 }
 
-function stopTime(){  //Line 37-41: This function is used to trigger the Reset button of the Stopwatch.
+function stopTime(){  //Line 37-41: This function is used to trigger the Pause button of the Stopwatch.
     clearInterval(timeInt);
     timeInt = null;
 
