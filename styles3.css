@@ -1,0 +1,27 @@
+.div-styles{
+    padding: 15px;
+    font-size: 20px;
+    background-color: #F7CFD8;
+    border-radius: 20px;
+    box-shadow: 2px 5px;
+    overflow-wrap: anywhere;
+}
+
+.cross{
+    background-color: red;
+    color: blanchedalmond;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.check{
+    background-color: green;
+    color: blanchedalmond;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    margin-right: 10px;
+}
