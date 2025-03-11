@@ -6,24 +6,34 @@
     <title>Task 03</title>
     <link rel="stylesheet" href="styles3.css">
 </head>
-<body style="display: flex; justify-content: center; margin: 10%; background-color: #A6F1E0; font-family: monospace;">
-    <div id="main-div" style="height: 500px; width: 400px; 
-    background-color: #F4F8D3; box-shadow: 5px 10px; border: solid; 
-    border-radius: 15px; padding: 20px; overflow: auto;">
+<body style=" background-color: #A6F1E0; font-family: monospace;">
+    <header>
+        <nav>
+            <ul style="display: flex; justify-content: space-between; width: 95%; margin: auto 0; font-size: 1.5rem;">
+                <li><a href="task2.html" target="_self">To Task-02<br>Fortune Generator</a></li>
+                <li><a href="index.html" target="_self">To Index</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="display: flex; justify-content: center; margin: 5%;">
+        <div id="main-div" style="height: 500px; width: 400px; 
+        background-color: #F4F8D3; box-shadow: 5px 10px; border: solid; 
+        border-radius: 15px; padding: 20px; overflow: auto;">
+        
+            <h1>My To-Do List</h1>
+            <div id="input-field" style="display: flex; justify-content: center; gap: 20px; flex-direction: column;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <textarea id="txt" style="outline: none; width: 100%; height: 50px;
+                    border-radius: 20px; font-size: 20px; padding: 5px; resize: none;"> </textarea>
     
-        <h1>My To-Do List</h1>
-        <div id="input-field" style="display: flex; justify-content: center; gap: 20px; flex-direction: column;">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-                <textarea id="txt" style="outline: none; width: 100%; height: 50px;
-                border-radius: 20px; font-size: 20px; padding: 5px; resize: none;"> </textarea>
-
-                <a id="b1" style="text-decoration: none; font-size: 20px; background-color: #73C7C7; padding: 10px;
-                border-radius: 20px; color: #F4F8D3;" href="#">ADD</a>
-            </div>
-            <div id="content" style="display: flex; gap: 20px; flex-direction: column;">
+                    <a id="b1" style="text-decoration: none; font-size: 20px; background-color: #73C7C7; padding: 10px;
+                    border-radius: 20px; color: #F4F8D3;" href="#">ADD</a>
+                </div>
+                <div id="content" style="display: flex; gap: 20px; flex-direction: column;">
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="jstyles3.js"></script>
 </body>
 </html>

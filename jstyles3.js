@@ -4,18 +4,18 @@ document.getElementById('b1').addEventListener('click', function(){ //Function f
 
     if (txt !== ''){ //If the value of txt is not empty, key variable is initialized, where the variable produces unique keys for localStorage.
         const key = `item_${Date.now()}`;
-        newDiv(txt, key); //Creates new div by passing the txt and keys.
+        newDiv(key, txt); //Creates new div by passing the txt and keys.
         localStorage.setItem(key, txt); //Saves the content and key of the created elements
         txtArea.value = '';
     };
 
 });
 
-function newDiv(txt, key){ //Generates the new div, check and cross buttons.
+function newDiv(key, txt){ //Generates the new div, check and cross buttons.
     const content = document.getElementById('content');
     const nDiv = document.createElement('div');
-    const cross= document.createElement('button');
     const check = document.createElement('button');
+    const cross= document.createElement('button');
     const span = document.createElement('span')
     
     span.innerText = txt;
@@ -36,20 +36,22 @@ function newDiv(txt, key){ //Generates the new div, check and cross buttons.
     nDiv.appendChild(cross);
     content.appendChild(nDiv);
 
-    cross.addEventListener('click', function(){ //Function for the Cross button. Removes the associated div from the list and localStorage.
-        content.removeChild(nDiv);
-        localStorage.removeItem(key)
-    });
-
-    check.addEventListener('click', function(){ // Function for the Check button. The If and Else condition are used as toggle feature to cross out the inner text.
+    check.addEventListener('click', function(){ // Function for the Check button. The If and Else condition are used as toggle feature to cross out the inner text.    
         if (span.style.textDecoration !== 'line-through'){
             span.style.textDecoration = 'line-through';
             span.style.opacity = '50%';
+            check.style.opacity = '20%';
         }
         else{
             span.style.textDecoration = 'none';
             span.style.opacity = '100%';
+            check.style.opacity = '100%';
         }
+    });
+
+    cross.addEventListener('click', function(){ //Function for the Cross button. Removes the associated div from the list and localStorage.
+        content.removeChild(nDiv);
+        localStorage.removeItem(key)
     });
 
 }
@@ -58,7 +60,7 @@ function loadItems(){ //Function for loading the saved elements
     for (let k = 0; k<localStorage.length; k++) {
         let key = localStorage.key(k);
         let txt = localStorage.getItem(key);
-        newDiv(txt, key);
+        newDiv(key, txt);
     }
 }
 

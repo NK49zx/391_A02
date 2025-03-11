@@ -28,26 +28,39 @@ b3.addEventListener('click', newdiv3);
 b4.addEventListener('click', newdiv4);
 
 function newdiv1(link){  //Line 30-34: This function generates random font colors.
-    const randCol = '#' + Math.floor(Math.random() * 16581376).toString(16);
-    ndiv.style.color = randCol;
+    const set1 = ['#FFFFFF', 'red', 'blue', '20px', 'monospace'];
+    ndiv.style.color = set1[0];
+    ndiv.style.backgroundColor = set1[1];
+    ndiv.style.borderColor = set1[2];
+    ndiv.style.fontSize = set1[3];
+    ndiv.style.fontFamily = set1[4];
 
 }
 
 function newdiv2(link){  //Line 36-39: This function generates random background colors.
-    const randBg = '#' + Math.floor(Math.random() * 16581376).toString(16);
-    ndiv.style.backgroundColor = randBg;
+    const set2 = ['wheat', 'blue', 'yellow', '32px', 'Impact'];
+    ndiv.style.color = set2[0];
+    ndiv.style.backgroundColor = set2[1];
+    ndiv.style.borderColor = set2[2];
+    ndiv.style.fontSize = set2[3];
+    ndiv.style.fontFamily = set2[4];
 }
 
 function newdiv3(link){  //Line 41-44: This function generates random border colors.
-    const randBdc = '#' + Math.floor(Math.random() * 16581376).toString(16);
-    ndiv.style.borderColor = randBdc;
+    const set3 = ['#FFA725', 'green', '#FFEDFA', '25px', 'Courier New'];
+    ndiv.style.color = set3[0];
+    ndiv.style.backgroundColor = set3[1];
+    ndiv.style.borderColor = set3[2];
+    ndiv.style.fontSize = set3[3];
+    ndiv.style.fontFamily = set3[4];
 }
 
 function newdiv4(link){ //Line 46-52: This function generates random fonts from fonts array and random font-sizes.
-    const randFont = Math.floor(Math.random() * fonts.length);
-    ndiv.style.fontFamily = fonts[randFont]
-
-    const randSize = (Math.floor(Math.random() * (40-16+1))+ 16) + 'px';
-    ndiv.style.fontSize = randSize
+    const set4 = ['#FFF2F2', 'blue', '#A0C878', '36px', 'Lucida Console'];
+    ndiv.style.color = set4[0];
+    ndiv.style.backgroundColor = set4[1];
+    ndiv.style.borderColor = set4[2];
+    ndiv.style.fontSize = set4[3];
+    ndiv.style.fontFamily = set4[4];
 }
 
