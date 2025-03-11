@@ -56,7 +56,7 @@ function newdiv3(link){  //Line 41-44: This function generates random border col
 }
 
 function newdiv4(link){ //Line 46-52: This function generates random fonts from fonts array and random font-sizes.
-    const set4 = ['#FFF2F2', 'blue', '#A0C878', '36px', 'Lucida Console'];
+    const set4 = ['black', 'yellow', '#A0C878', '36px', 'Lucida Console'];
     ndiv.style.color = set4[0];
     ndiv.style.backgroundColor = set4[1];
     ndiv.style.borderColor = set4[2];
